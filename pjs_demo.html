@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pjs</title>
+</head>
+<body>
+	<div id="demo1">
+		{{ title }}
+	</div>
+	<div id="demo2" pi-repeat="list" pi-vo="vo">
+		<li>{{vo}}</li>
+	</div>
+	<script src="pjs.js"></script>
+	<script>
+		
+		window.onload = function(){
+			var data = { title: "This is a demo", list: [1,2,3,4,5]};
+			pjs.render('demo1', data);
+			pjs.render('demo2', data);
+		}
+	</script>
+</body>
+</html>
