@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pjs</title>
+</head>
+<body>
+	<div id="demo">
+		<h1>{{title}}</h1>
+		<hr>
+		<ul pn-repeat="items" pn-vo="vo">
+			<li>{{vo}}</li>
+		</ul>
+		<hr>
+		<ul pn-repeat="list" pn-vo="lvo">
+			<li>{{lvo.name}} - {{lvo.age}}</li>
+		</ul>
+	</div>
+	<script src="pjs-0.1.js"></script>
+	<script>
+		var pjs = {};
+		pjs.render = function(id, data){
+			try {
+
+			} catch (e){
+				console.log('error:'+e);
+			}
+		}
+
+		window.onload = function(){
+			var data = {title:"This is pjs demo",
+						items: [1,2,3,4,5],
+						list: [{name:"jodie1", age:11},
+							   {name:"jodie2", age:12},
+							   {name:"jodie3", age:13}]
+						};
+			pjs.render('demo', data);
+		}
+
+	</script>
+</body>
+</html>
